@@ -1,0 +1,25 @@
+<header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        Bangladesh IATI/AIMS import
+      </a>
+
+      <div class="trigger">
+        {% assign pages = site.pages | sort:'order' %}
+        {% for p in pages %}
+          {% if p.title %}
+          <a class="page-link{% if p.url == page.url %} active{% endif %}"
+          href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </nav>
+
+  </div>
+
+</header>

@@ -1,0 +1,10 @@
+# Site settings
+title: Bangladesh IATI &ndash; AIMS import
+description: Developing a sustainable process for importing IATI data to Bangladesh's AIMS
+baseurl: ""
+url: "http://bd-iati.github.io" # the base hostname & protocol for your site
+github_username:  bd-iati
+email: 
+
+# Build settings
+markdown: kramdown
