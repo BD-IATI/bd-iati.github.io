@@ -8,3 +8,7 @@ email:
 
 # Build settings
 markdown: kramdown
+
+collections:
+  documentation:
+    output: true
