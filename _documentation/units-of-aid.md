@@ -1,5 +1,6 @@
 ---
 layout: documentation
+comments: true
 title: Units of aid
 permalink: /documentation/units-of-aid/
 order: 0
