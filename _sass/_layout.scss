@@ -286,17 +286,25 @@ h1 {
 nav.sub-nav {
     ul {
         margin-left: 0px;
+        margin-right:10px;
     }
     ul li {
         margin-left:10px;
+        a {
+          padding:2px;
+        }
+        a.active {
+          color: #000000;
+          text-decoration: none;
+        }
     }
-    width:30%;
+    width:20%;
     float:left;
     ul li.sub-nav-header {
         margin-left:0px;
     }
 }
 .post-content-sub-nav {
-    width: 70%;
+    width: 80%;
     float:left;
 }
