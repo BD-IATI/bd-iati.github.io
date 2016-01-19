@@ -9,7 +9,7 @@ layout: default
   <nav class="sub-nav">
     <ul class="sub-nav">
       <li class="sub-nav-header">
-        <a class="page-link{% if "documentation" == page.url %} active{% endif %}"
+        <a class="page-link{% if "/documentation/" == page.url %} active{% endif %}"
         href="{{ "/documentation" | prepend: site.baseurl }}">Documentation</a>
       </li>
       {% assign dpages = site.documentation | sort:'order' %}
