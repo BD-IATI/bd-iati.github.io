@@ -12,7 +12,8 @@ layout: default
         <a class="page-link{% if "documentation" == page.url %} active{% endif %}"
         href="{{ "/documentation" | prepend: site.baseurl }}">Documentation</a>
       </li>
-      {% for d in site.documentation %}
+      {% assign dpages = site.documentation | sort:'order' %}
+      {% for d in dpages %}
       <li>
         <a class="page-link{% if d.url == page.url %} active{% endif %}"
         href="{{ d.url | prepend: site.baseurl }}">{{ d.title }}</a>
