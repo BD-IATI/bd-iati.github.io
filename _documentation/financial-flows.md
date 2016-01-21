@@ -8,11 +8,11 @@ order: 5
 
 Documentation on the link between the different financial flows in the Bangladesh AIMS and how to match and insert IATI data.
 
-# Project Value
-# Committments
-# Planned disbursements
-# Actual Disbursements
-# Expenditure
++ Project Value
++ Committments
++ Planned disbursements
++ Actual Disbursements
++ Expenditure
 
 Disbursements (both planned and actual) are linked to committments (which are actually the value of financing agreements)
 
