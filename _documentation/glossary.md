@@ -6,6 +6,7 @@ permalink: /documentation/glossary/
 order: 1
 ---
 
+---  |  ---  
 DP | Development Partner
 IATI | International Aid Transparency Initiative
 UoA | Unit of Aid
