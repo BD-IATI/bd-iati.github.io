@@ -30,5 +30,5 @@ Users will need to be able to select (or add) a Trust Fund as the responsible en
 
 Several fields in the IATI standard can help us to identify what type of project is being imported and so influence the import process.
 
-+ Standard projects may often have IATI attribute [aid-type](http://iatistandard.org/201/codelists/AidType/) set to 'C01'. Cofinanced/Pooled projects projects may often have 'aid-type' set to 'B04' and Trust Fund financed projectsmay often have 'aid-type' set to 'B03'
++ Standard projects may often have IATI attribute `[aid-type](http://iatistandard.org/201/codelists/AidType/)` set to `C01`. Cofinanced/Pooled projects projects may often have `aid-type` set to `B04` and Trust Fund financed projectsmay often have `aid-type` set to `B03`
 + Projects for whom the [recieving organisation of a disbursement transation](http://iatistandard.org/201/activity-standard/iati-activities/iati-activity/transaction/receiver-org/) is a donor in the AIMS are likely to be either Cofinanced/Pooled or Trust Funds.
