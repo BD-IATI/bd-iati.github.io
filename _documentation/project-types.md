@@ -6,7 +6,7 @@ permalink: /documentation/project-types/
 order: 4
 ---
 
-Projects are the standard [unit of aid](../units-of-aid/) in the AIMS with most attributes being assigned at the project level.
+Projects are the standard unit of aid in the AIMS with most attributes being assigned at the project level.
 
 ## Financing relationsips in the Bangladesh AIMS
 
