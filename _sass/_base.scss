@@ -177,7 +177,23 @@ pre {
     }
 }
 
-
+table {
+  margin-bottom: 20px;
+  thead {
+    background-color: #eeeeee;
+  }
+  tr {
+    border: 1px solid #eeeeee;
+    th, td {
+      padding: 6px;
+      text-align: left;
+      min-width: 40px;
+    }
+    td {
+      padding-bottom: 10px;
+    }
+  }
+}
 
 /**
  * Clearfix
