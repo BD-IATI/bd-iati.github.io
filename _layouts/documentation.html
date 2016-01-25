@@ -7,18 +7,20 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
   </header>
   <nav class="sub-nav">
-    <ul class="sub-nav">
+    <ul>
       <li class="sub-nav-header">
         <a class="page-link{% if "/documentation/" == page.url %} active{% endif %}"
         href="{{ "/documentation" | prepend: site.baseurl }}">Documentation</a>
       </li>
-      {% assign dpages = site.documentation | sort:'order' %}
-      {% for d in dpages %}
-      <li>
-        <a class="page-link{% if d.url == page.url %} active{% endif %}"
-        href="{{ d.url | prepend: site.baseurl }}">{{ d.title }}</a>
-      </li>
-      {% endfor %}
+      <ol>
+        {% assign dpages = site.documentation | sort:'order' %}
+        {% for d in dpages %}
+        <li>
+          <a class="page-link{% if d.url == page.url %} active{% endif %}"
+          href="{{ d.url | prepend: site.baseurl }}">{{ d.title }}</a>
+        </li>
+        {% endfor %}
+      </ol>
     </ul>
   </nav>
   <div class="post-content-sub-nav">
