@@ -200,6 +200,21 @@ ul li {
  */
 .page-content, .post-content {
     padding: 0 0 $spacing-unit 0;
+    &.home {
+      max-width: 900px;
+      padding: 0 0 30px;
+      margin: 0 auto 0 auto;
+      h1 {
+        color: $base-color;
+        padding: 15px 0px 15px 0px;
+        font-size:72px;
+
+        @include media-query($on-palm) {
+            margin-top:5px;
+            font-size:40px;
+        }
+      }
+    }
 }
 
 .page-heading {
@@ -231,11 +246,13 @@ ul li {
  * Posts
  */
 h1 {
+    font-family: "Signika","Helvetica Neue",Helvetica,Arial,sans-serif;
     letter-spacing: -1px;
     line-height: 1;
     margin-bottom: $spacing-unit;
     font-size:60px;
     margin-top:60px;
+    color: $base-color;
 
     @include media-query($on-laptop) {
         font-size: 36px;
@@ -243,15 +260,6 @@ h1 {
     @include media-query($on-palm) {
         margin-top:5px;
         font-size:30px;
-    }
-}
-
-.home h1 {
-    font-size:72px;
-
-    @include media-query($on-palm) {
-        margin-top:5px;
-        font-size:40px;
     }
 }
 
