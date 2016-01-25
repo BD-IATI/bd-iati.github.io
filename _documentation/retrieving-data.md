@@ -6,9 +6,16 @@ permalink: /documentation/retrieving-data/
 order: 0
 ---
 
+* 
+{:toc}
+
+## Introduction
+
 When loading data into the IATI-AIMS import tool, users should not be required to look at or handle XML files. This must be handled behind the scenes.
 
 We're proposing to retrieve the data from the IATI Datastore in the first instance. The Datastore makes it possible to query for subsets of IATI data according to a number of filters.
+
+## Retrieving from the IATI Datastore
 
 To retrieve data from Bangladesh for a particular donor, we can run the following query:
 
