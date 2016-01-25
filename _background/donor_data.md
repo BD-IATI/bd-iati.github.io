@@ -1,7 +1,7 @@
 ---
 layout: background
 comments: true
-title: Data overview
+title: IATI data overview
 permalink: /background/data-overview/
 order: 1
 ---
