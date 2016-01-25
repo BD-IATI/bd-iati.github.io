@@ -45,7 +45,7 @@ Implementing organisations are harder to handle because there is no solid method
 1. projects should be presumed to be found elsewhere in the AIMS if:
    * the implementing organisation is of organisation type `40` ("multilateral");
    * the implementing organisation has a ref `11000` ("donor governments") or `13000` ("third-country governments, delegated cooperation")
-   * the implementing organisation has a ref that matches a "fund source" from the AIMS
+   * the implementing organisation has a ref that matches a "fund source" from the AIMS &ndash; NB there is a field to state the IATI identifier of the organisation, but it needs to be filled out
 2. users should be presented with the list of implementing organisations contained in all of the projects (a single unique list) and asked to correct the answers from step 1.
 
 We may also want to consider looking at `provider-org` and `receiver-org` on transactions, but the data is likely to be of a much lower quality than that found in implementing organisations.
