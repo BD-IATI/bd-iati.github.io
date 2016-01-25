@@ -205,6 +205,7 @@ ul li {
       padding: 0 0 30px;
       margin: 0 auto 0 auto;
       h1 {
+        font-family: "Signika","Helvetica Neue",Helvetica,Arial,sans-serif;
         color: $base-color;
         padding: 15px 0px 15px 0px;
         font-size:72px;
@@ -246,7 +247,6 @@ ul li {
  * Posts
  */
 h1 {
-    font-family: "Signika","Helvetica Neue",Helvetica,Arial,sans-serif;
     letter-spacing: -1px;
     line-height: 1;
     margin-bottom: $spacing-unit;
