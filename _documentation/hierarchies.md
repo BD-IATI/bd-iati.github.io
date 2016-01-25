@@ -6,6 +6,9 @@ permalink: /documentation/hierarchies/
 order: 1
 ---
 
+* 
+{:toc}
+
 The data [retrieved from the datastore](../retrieving-data/) will be almost identical to the way individual donors publish their own data. This poses something of a challenge, as donors can publish in different ways, sometimes using hierarchies of activities if that is important to accurately reflect their business model.
 
 ## Understanding hierarchies in IATI
