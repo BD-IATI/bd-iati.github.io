@@ -3,7 +3,7 @@ layout: documentation
 comments: true
 title: Retrieving IATI data
 permalink: /documentation/retrieving-data/
-order: 3
+order: 0
 ---
 
 When loading data into the IATI-AIMS import tool, users should not be required to look at or handle XML files. This must be handled behind the scenes.

@@ -3,7 +3,7 @@ layout: documentation
 comments: true
 title: Currency conversion
 permalink: /documentation/currency/
-order: 2
+order: 4
 ---
 
 In accordance with the AIMS, we will generally use the [Bangladesh Bank](https://www.bb.org.bd/) (the central bank) rates. These could be programmatically retrieved from the following site, though an API returning JSON would probably be preferable:

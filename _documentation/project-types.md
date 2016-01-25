@@ -3,7 +3,7 @@ layout: documentation
 comments: true
 title: Project types
 permalink: /documentation/project-types/
-order: 4
+order: 2
 ---
 
 Projects are the standard unit of aid in the AIMS with most attributes being assigned at the project level.
