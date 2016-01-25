@@ -3,7 +3,7 @@ layout: documentation
 comments: true
 title: Financial flows
 permalink: /documentation/financial-flows/
-order: 5
+order: 3
 ---
 
 Documentation on the link between the different financial flows in the Bangladesh AIMS and how to match and insert IATI data.
