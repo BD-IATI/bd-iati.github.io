@@ -49,6 +49,11 @@ DFID publishes projects and sub-components in its IATI data. The approvals proce
 ### Germany
 Germany's data is published by BMZ and includes projects funded through GIZ and KfW. The data currently includes cumulative figures for each project, without any breakdown over time. This makes it difficult to know how much has been spent in any year. GIZ projects also contain multiple "phases", but it is unclear if these phases are or should be joined together to make a single project in the IATI data. These issues will be taken up with headquarters.
 
+*See also comparison of projects reported in AIMS vs IATI:*
+
+* [comparison of German projects](https://github.com/BD-IATI/donor-data/blob/master/germany/germany.ipynb) found in IATI vs the AIMS &ndash; scroll down on that page for the comparison of projects
+* [download the comparison table here](https://raw.githubusercontent.com/BD-IATI/donor-data/master/germany/iati_projects_and_aims.csv)
+
 ### Netherlands
 For the the Netherlands' projects, commitments are made in the local currency value - in Bangladesh, this is USD rather than BDT. The commitment value is stored in the Ministry of Foreign Affairs' internal project management system in EUR and USD. The EUR value is shown in IATI data. At the start of each year, the EUR commitment values are recalculated to ensure that the local project value in USD is accurately reflected in EUR, given currency fluctuations over the previous year. This should be fairly straightforward to handle given the mechanisms the IATI Standard has for dealing with currencies, but it is useful to be aware of this nuance. The Netherlands also spends much of its funds through large tranches of programmatic funding to implementing partners such as Dutch NGOs. Including IATI data published by Dutch NGOs may help to provide a fuller picture of Dutch development cooperation projects.
 
