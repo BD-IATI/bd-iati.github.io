@@ -287,15 +287,21 @@ nav.sub-nav {
     ul {
         margin-left: 0px;
         margin-right:10px;
-    }
-    ul li {
-        margin-left:10px;
-        a {
-          padding:2px;
+        li, ol li {
+            margin-left:10px;
+            a {
+              padding:2px;
+            }
+            a.active {
+              color: #000000;
+              text-decoration: none;
+            }
         }
-        a.active {
-          color: #000000;
-          text-decoration: none;
+        ol {
+            margin-left: 20px;
+            li {
+              list-style-type: number;
+            }
         }
     }
     width:20%;
