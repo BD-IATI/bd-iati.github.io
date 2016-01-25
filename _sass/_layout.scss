@@ -334,3 +334,19 @@ nav.sub-nav {
   text-decoration: none !important; // do not underline
   opacity: 1;
 }
+
+#markdown-toc {
+  border: 1px solid #eeeeee;
+  padding: 8px;
+  float: right;
+  li {
+    list-style-type: none;
+    font-size: 1rem;
+  }
+  ul {
+    margin-left: 15px;
+    li {
+        font-size: 0.9rem;
+    }
+  }
+}
