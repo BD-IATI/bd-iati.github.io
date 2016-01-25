@@ -6,6 +6,7 @@ permalink: /documentation/glossary/
 order: 1
 ---
 
+Acronym | Definition
 ---  |  ---  
 DP | Development Partner
 IATI | International Aid Transparency Initiative
