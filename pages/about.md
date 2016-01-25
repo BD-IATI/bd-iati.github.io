@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-order: 2
+order: 3
 ---
 
 We're developing sustainable processes for import of [IATI data](http://aidtransparency.net) into Bangladesh's [Aid Information Management System (AIMS)](http://aims.erd.gov.bd/)
