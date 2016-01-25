@@ -6,6 +6,9 @@ permalink: /documentation/currency/
 order: 4
 ---
 
+* 
+{:toc}
+
 In accordance with the AIMS, we will generally use the [Bangladesh Bank](https://www.bb.org.bd/) (the central bank) rates. These could be programmatically retrieved from the following site, though an API returning JSON would probably be preferable:
 
     https://www.bb.org.bd/econdata/exchangerate_dtl.php?loadmode=2&cboCurrency=All&ddlYear=2016&UsersList=January&SelectPeriod=January,%202015    
