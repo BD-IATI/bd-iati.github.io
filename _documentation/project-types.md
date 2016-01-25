@@ -6,9 +6,12 @@ permalink: /documentation/project-types/
 order: 2
 ---
 
+* 
+{:toc}
+
 Projects are the standard unit of aid in the AIMS with most attributes being assigned at the project level.
 
-## Financing relationsips in the Bangladesh AIMS
+## Financing relationships in the Bangladesh AIMS
 
 The Bangladesh AIMS allows for three financing relationships for projects:
 
