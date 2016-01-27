@@ -46,6 +46,13 @@ A number of DPs face specific challenges with their data. These challenges are c
 ### DFID
 DFID publishes projects and sub-components in its IATI data. The approvals process in Bangladesh means that projects can only be reported after a certain stage, so certain of DFID's project components (preparatory work, M&E) should not be reported to the AIMS. The import interface will need to allow components to be deselected from projects before importing. It is possible that other DPs will face a similar challenge, and they may have a less clear division in their data.
 
+All DFID AIMS projects appear to be found in IATI data. There are a significant number of projects in DFID's IATI data that are not found in the AIMS.
+
+*See also comparison of DFID projects reported in AIMS vs IATI:*
+
+* [comparison of DFID projects](https://github.com/BD-IATI/donor-data/blob/master/dfid/dfid.ipynb) found in IATI vs the AIMS &ndash; scroll down on that page for the comparison of projects
+* [download the comparison table here](https://raw.githubusercontent.com/BD-IATI/donor-data/master/dfid/iati_projects_and_aims.csv)
+
 ### Germany
 Germany's data is published by BMZ and includes projects funded through GIZ and KfW. The data currently includes cumulative figures for each project, without any breakdown over time. This makes it difficult to know how much has been spent in any year. GIZ projects also contain multiple "phases", but it is unclear if these phases are or should be joined together to make a single project in the IATI data. These issues will be taken up with headquarters.
 
