@@ -49,7 +49,7 @@ DFID publishes projects and sub-components in its IATI data. The approvals proce
 ### Germany
 Germany's data is published by BMZ and includes projects funded through GIZ and KfW. The data currently includes cumulative figures for each project, without any breakdown over time. This makes it difficult to know how much has been spent in any year. GIZ projects also contain multiple "phases", but it is unclear if these phases are or should be joined together to make a single project in the IATI data. These issues will be taken up with headquarters.
 
-*See also comparison of projects reported in AIMS vs IATI:*
+*See also comparison of Germany projects reported in AIMS vs IATI:*
 
 * [comparison of German projects](https://github.com/BD-IATI/donor-data/blob/master/germany/germany.ipynb) found in IATI vs the AIMS &ndash; scroll down on that page for the comparison of projects
 * [download the comparison table here](https://raw.githubusercontent.com/BD-IATI/donor-data/master/germany/iati_projects_and_aims.csv)
@@ -65,3 +65,13 @@ UNICEF has a unit of aid in its IATI data that shows results rather than project
 
 ### USAID
 USAID has a very granular unit of aid in its IATI data ("awards"), so activities will need to be grouped together to create meaningful projects. It appears that in Bangladesh, one project has one or many associated awards, so an interface to allow grouping of awards into projects will be useful. There may however be awards belonging to multiple projects - we propose that such awards should not be "split" for now, but should be handled manually. Systems improvements currently underway at USAID could in time help to improve this process
+
+### World Bank
+The World Bank administers a number of trust funds. It will be important to work out how to handle these trust funds in the data. 
+
+Our understanding is that trust funds are currently not published in the World Bank's IATI data. The World Bank IATI data also contains financial data only one quarter (or more) in arrears - the latest data (as of 2016-01-27) was dated from `2015-09-30`. This is too old to be useful on an ongoing basis. Disbursement data is also aggregated by quarter; a minimum of monthly disaggregation would be preferable.
+
+*See also comparison of World Bank projects reported in AIMS vs IATI:*
+
+* [comparison of World Bank projects](https://github.com/BD-IATI/donor-data/blob/master/worldbank/worldbank.ipynb) found in IATI vs the AIMS &ndash; scroll down on that page for the comparison of projects
+* [download the comparison table here](https://raw.githubusercontent.com/BD-IATI/donor-data/master/worldbank/iati_projects_and_aims.csv)
