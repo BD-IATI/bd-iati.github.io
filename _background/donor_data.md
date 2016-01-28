@@ -40,7 +40,7 @@ Sweden, Sida |  7.67  | 20 | Very good
 
 *Disbursements refer to AIMS data as at 2015-11-17 for FY14, in millions of USD. PWYF Rating refers to Publish What You Fund's 2014 Aid Transparency Index*
 
-## DPs with specific challenges
+## Analysis of specific donors' data
 A number of DPs face specific challenges with their data. These challenges are captured here not to criticise them, but to ensure that they are adequately taken into account in the course of this work. In some cases this may mean DPs changing the way they publish data at headquarters level, and in others it may mean that the importing tool needs to be flexible to deal with nuances in the way data is published. In time, there may be arguments for changes to the IATI Standard or the way in which it is interpreted in order to make it easier for software to handle these specificities or differences. However, we suggest any changes to the Standard should be made only once different approaches have been thoroughly tested.
 
 ### DFID
@@ -48,10 +48,17 @@ DFID publishes projects and sub-components in its IATI data. The approvals proce
 
 All DFID AIMS projects appear to be found in IATI data. There are a significant number of projects in DFID's IATI data that are not found in the AIMS.
 
+Question: how does DFID enter projects into the AIMS when:
+
+1. component A is a trust fund contribution
+2. component B is funded through another organisation
+
+&#8230; assuming both components A and B are includable in the AIMS / approved? Is it only the value of component B that should be included?
+
 *See also comparison of DFID projects reported in AIMS vs IATI:*
 
 * [comparison of DFID projects](https://github.com/BD-IATI/donor-data/blob/master/dfid/dfid.ipynb) found in IATI vs the AIMS &ndash; scroll down on that page for the comparison of projects
-* [download the comparison table here](https://raw.githubusercontent.com/BD-IATI/donor-data/master/dfid/iati_projects_and_aims.csv)
+* [download the comparison table here](https://raw.githubusercontent.com/BD-IATI/donor-data/master/dfid/iati_projects_and_aims.xlsx)
 
 ### Germany
 Germany's data is published by BMZ and includes projects funded through GIZ and KfW. The data currently includes cumulative figures for each project, without any breakdown over time. This makes it difficult to know how much has been spent in any year. GIZ projects also contain multiple "phases", but it is unclear if these phases are or should be joined together to make a single project in the IATI data. These issues will be taken up with headquarters.
