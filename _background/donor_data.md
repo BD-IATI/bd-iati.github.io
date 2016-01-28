@@ -55,14 +55,14 @@ Focusing on those projects where the implementing organisation is an organisatio
 * projects in **green** were not found in the AIMS (and are presumably reported by the implementing organisation)
 * projects in **orange** were found in the AIMS (and are presumably not reported by the implementing organisation)
 
-It will be important to work out what features of a project mean that it should be reported by the funder vs the implementer in this context. We also need to work out how to identify projects that are contributions to (it seems exclusively World Bank-adminstered) Trust Funds.
+It will be important to work out what features of a project mean that it should be reported by the funder vs the implementer in this context. We also need to work out how to identify when an activity needs to be mapped to another organisation's activity when the two relate to the same project. We also need to work out how to identify projects that are contributions to (it seems exclusively World Bank-adminstered) Trust Funds.
 
 #### Example project
 
-e.g. Project CA-3-A035529001 ("Skills Training and Enhancement Project") [[d-portal](http://www.d-portal.org/ctrack.html?country=BD#view=act&aid=CA-3-A035529001)] [[IATI Datastore ](http://datastore.iatistandard.org/api/1/access/activity.xml?iati-identifier=CA-3-A035529001)]
+e.g. Project `CA-3-A035529001` ("Skills Training and Enhancement Project") [[d-portal](http://www.d-portal.org/ctrack.html?country=BD#view=act&aid=CA-3-A035529001)] [[IATI Datastore ](http://datastore.iatistandard.org/api/1/access/activity.xml?iati-identifier=CA-3-A035529001)]
 
-* this is reported in the AIMS as a [World Bank project (P090807)](http://aims.erd.gov.bd/AIMS/ProjectInfo/Details/1188);
-* the money comes from a [Trust Fund (TF015113)](http://aims.erd.gov.bd/AIMS/TrustFund/Index) which comes from Canada (NB, that link can only be viewed by users with certain privileges);
+* this is reported in the AIMS as a [World Bank project `P090807`](http://aims.erd.gov.bd/AIMS/ProjectInfo/Details/1188);
+* the money comes from a [Trust Fund `TF015113`](http://aims.erd.gov.bd/AIMS/TrustFund/Index) with 100% of the funds coming from Canada (NB, that link can only be viewed by users with certain privileges);
 * it's then implemented by ERD and the Ministry of Education.
 
 ### DFID
