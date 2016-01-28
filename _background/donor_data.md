@@ -43,6 +43,28 @@ Sweden, Sida |  7.67  | 20 | Very good
 ## Analysis of specific donors' data
 A number of DPs face specific challenges with their data. These challenges are captured here not to criticise them, but to ensure that they are adequately taken into account in the course of this work. In some cases this may mean DPs changing the way they publish data at headquarters level, and in others it may mean that the importing tool needs to be flexible to deal with nuances in the way data is published. In time, there may be arguments for changes to the IATI Standard or the way in which it is interpreted in order to make it easier for software to handle these specificities or differences. However, we suggest any changes to the Standard should be made only once different approaches have been thoroughly tested.
 
+### Canada
+Canada has a much larger number of projects in its IATI data than in its AIMS data. Some of these projects may have been excluded for historical or other reasons. However, in working out how best to represent projects that are co-funded / trust funds, etc, it is interesting to look at similar projects that have been excluded.
+
+#### Considering how to handle trust funds etc.
+
+[This dataset](https://github.com/BD-IATI/donor-data/raw/aae21ba2196d1b1b85be1c2d938b5510d3b58d81/canada/iati_projects_and_aims.xlsx) contains the full list of Canadian projects in IATI data, filtered for projects of aid type `B03` or `B04` (contributions to multilaterals), and excluding projects that are tagged as Bangladesh for 20% or less (as opposed to other countries). Where projects are marked `NOT FOUND` on the left, the project was not found in the IATI data.
+
+Focusing on those projects where the implementing organisation is an organisation that also reports to the AIMS (UNFPA, UNICEF and World Bank):
+
+* projects in **green** were not found in the AIMS (and are presumably reported by the implementing organisation)
+* projects in **orange** were found in the AIMS (and are presumably not reported by the implementing organisation)
+
+It will be important to work out what features of a project mean that it should be reported by the funder vs the implementer in this context. We also need to work out how to identify projects that are contributions to (it seems exclusively World Bank-adminstered) Trust Funds.
+
+#### Example project
+
+e.g. Project CA-3-A035529001 ("Skills Training and Enhancement Project") [[d-portal](http://www.d-portal.org/ctrack.html?country=BD#view=act&aid=CA-3-A035529001)] [[IATI Datastore ](http://datastore.iatistandard.org/api/1/access/activity.xml?iati-identifier=CA-3-A035529001)]
+
+* this is reported in the AIMS as a [World Bank project (P090807)](http://aims.erd.gov.bd/AIMS/ProjectInfo/Details/1188);
+* the money comes from a [Trust Fund (TF015113)](http://aims.erd.gov.bd/AIMS/TrustFund/Index) which comes from Canada (NB, that link can only be viewed by users with certain privileges);
+* it's then implemented by ERD and the Ministry of Education.
+
 ### DFID
 DFID publishes projects and sub-components in its IATI data. The approvals process in Bangladesh means that projects can only be reported after a certain stage, so certain of DFID's project components (preparatory work, M&E) should not be reported to the AIMS. The import interface will need to allow components to be deselected from projects before importing. It is possible that other DPs will face a similar challenge, and they may have a less clear division in their data.
 
