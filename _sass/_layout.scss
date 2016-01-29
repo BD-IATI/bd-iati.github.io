@@ -285,6 +285,7 @@ h1 {
     h4 {
         font-size: 20px;
         font-style: italic;
+        font-weight: bold;
 
         @include media-query($on-laptop) {
             font-size: 18px;
