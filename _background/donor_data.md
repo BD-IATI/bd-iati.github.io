@@ -70,6 +70,8 @@ DFID publishes projects and sub-components in its IATI data. The approvals proce
 
 All DFID AIMS projects appear to be found in IATI data. There are a significant number of projects in DFID's IATI data that are not found in the AIMS.
 
+#### Project components
+
 Question: how does DFID enter projects into the AIMS when:
 
 1. component A is a trust fund contribution
@@ -81,6 +83,22 @@ Question: how does DFID enter projects into the AIMS when:
 
 * [comparison of DFID projects](https://github.com/BD-IATI/donor-data/blob/master/dfid/dfid.ipynb) found in IATI vs the AIMS &ndash; scroll down on that page for the comparison of projects
 * [download the comparison table here](https://raw.githubusercontent.com/BD-IATI/donor-data/master/dfid/iati_projects_and_aims.xlsx)
+
+#### Implementing organisations
+
+DFID appears to be using [CRS channel codes](http://iatistandard.org/201/codelists/CRSChannelCode/) for implementing organisations. These include some broad categories like `11000` ("donor") and `50000` ("other"). However, significantly more information about organisatiosn is provided in each transaction's `receiver-org`. 
+
+* These two pieces of information together might provide us with enough information about which other organisation the project should map to. 
+* However, it is probably not desirable for the import tool to have too many donor-specific "hacks".
+* In some cases there are multiple receiver orgs, but in these cases there is generally a dominant receiver org by value.
+* There is also an issue where the specific organisation is in quite a few cases not stated, though it may be obvious from the title or description of the activity which organisation it is (so this has nothing to do with security exclusions etc.)
+
+*See comparison of DFID implementing organisations and receiver organisations:*
+
+* [comparison of DFID implementing orgs and receiver orgs](https://github.com/BD-IATI/donor-data/blob/2d267cd026343f177addde1c6fc7ac9a1d468c9d/dfid/dfid_transactions_implementers.xlsx) - annotated cells (in red) shows where:
+   * the project is probably implemented by an organisation reporting elsewhere in the AIMS
+   * it is unclear which organisation is referred to
+* [flat version of the same file](https://github.com/BD-IATI/donor-data/raw/master/dfid/dfid_transactions_implementers_flat.xlsx) - to facilitate further analysis
 
 ### Germany
 Germany's data is published by BMZ and includes projects funded through GIZ and KfW. The data currently includes cumulative figures for each project, without any breakdown over time. This makes it difficult to know how much has been spent in any year. GIZ projects also contain multiple "phases", but it is unclear if these phases are or should be joined together to make a single project in the IATI data. These issues will be taken up with headquarters.
