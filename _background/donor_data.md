@@ -86,7 +86,7 @@ Question: how does DFID enter projects into the AIMS when:
 
 #### Implementing organisations
 
-DFID appears to be using [CRS channel codes](http://iatistandard.org/201/codelists/CRSChannelCode/) for implementing organisations. These include some broad categories like `11000` ("donor") and `50000` ("other"). However, significantly more information about organisatiosn is provided in each transaction's `receiver-org`. 
+DFID appears to be using [CRS channel codes](http://iatistandard.org/201/codelists/CRSChannelCode/) for implementing organisations. These include some broad categories like `11000` ("donor") and `50000` ("other"). However, significantly more information about organisations is provided in each transaction's `receiver-org`. 
 
 * These two pieces of information together might provide us with enough information about which other organisation the project should map to. 
 * However, it is probably not desirable for the import tool to have too many donor-specific "hacks".
