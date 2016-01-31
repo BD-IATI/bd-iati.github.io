@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+  <nav class="sub-nav">
+    <ul>
+      <li class="sub-nav-header">
+        <a class="page-link{% if "/background/" == page.url %} active{% endif %}"
+        href="{{ "/data" | prepend: site.baseurl }}">Data</a>
+      </li>
+      <ol>
+        {% assign dpages = site.dpdata | sort:'order' %}
+        {% for d in dpages %}
+        <li>
+          <a class="page-link{% if d.url == page.url %} active{% endif %}"
+          href="{{ d.url | prepend: site.baseurl }}">{{ d.title }}</a>
+        </li>
+        {% endfor %}
+      </ol>
+    </ul>
+  </nav>
+  <div class="post-content-sub-nav">
+    <article class="post-content">
+      {{ content }}
+    </article>
+  </div>
+
+</div>
