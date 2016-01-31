@@ -1,20 +1,23 @@
 ---
 layout: documentation
 comments: true
-title: Versions
+title: Versions in IATI data
 permalink: /documentation/versions/
 order: 5
 ---
+
+* 
+{:toc}
 
 ## Versions of the IATI Standard
 
 There are now a number of versions of the IATI Standard. The main breaking changes are:
 
-* Versions 1.03-1.04 &ndash; substantial change to the sub-national location / geocoding schema ([see changelog](http://iatistandard.org/upgrades/decimal-upgrade-to-1-04/1-04-changes/)). One of the main changes was where location coordinates were stored. 1.03 used:
+* Versions 1.03-1.04 &ndash; substantial change to the sub-national location / geocoding schema ([see changelog](http://iatistandard.org/upgrades/decimal-upgrade-to-1-04/1-04-changes/)). One of the main changes was where location coordinates were stored. 1.03 placed longitude and latitude as separate attributes on a `coordinates` element:
 
-      <coordinates latitude="34.341944400000003000" longitude="62.203055599999971000" precision="2" />
+      <coordinates latitude="31.616944" longitude="65.716944" precision="2" />
     
-    Whereas 1.04 uses:
+    Whereas 1.04 places the coordinates together in the text of a `point/pos` element:
 
       <point srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
         <pos>31.616944 65.716944</pos>
