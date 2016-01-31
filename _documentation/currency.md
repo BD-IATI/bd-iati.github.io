@@ -3,7 +3,7 @@ layout: documentation
 comments: true
 title: Currency conversion
 permalink: /documentation/currency/
-order: 4
+order: 9
 ---
 
 * 
