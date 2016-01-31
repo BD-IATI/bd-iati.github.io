@@ -6,6 +6,9 @@ permalink: /documentation/updating/
 order: 4
 ---
 
+* 
+{:toc}
+
 ## Updating activities
 
 Where a field has been tied to a specific IATI activity, it should be possible to update that field automatically as IATI data changes. IATI data should be checked for updates each night. To begin with, a user should be prompted when a relevant change has been identified. They should then be able to choose whether to accept the changes or reject them. Their choices should be persistent if the update is rejected, i.e. the following night, even though the IATI data differs from the AIMS data, the user should not be prompted to update. Notifications could be provided periodically be email or by using the AIMS' notifications interface.
