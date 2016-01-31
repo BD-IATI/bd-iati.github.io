@@ -29,6 +29,11 @@ h6, .hd-xxs {
     }
     ul li, ol li {
         font-size: 1.1rem;
+        margin-bottom:2px;
+    }
+    ul li p, ol li p {
+        font-size: 1.1rem;
+        margin-bottom: 0;
     }
     
 }
