@@ -16,3 +16,5 @@ collections:
     output: true
   dpdata:
     output: true
+  sprints:
+    output: true
