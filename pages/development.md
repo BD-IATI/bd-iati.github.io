@@ -1,9 +1,8 @@
 ---
-layout: background
-comments: true
+layout: development
 title: Development
-permalink: /background/development/
-order: 3
+permalink: /development/
+order: 1
 ---
 
 * 
