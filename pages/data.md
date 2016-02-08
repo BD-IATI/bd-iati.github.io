@@ -2,7 +2,7 @@
 layout: data
 title: Data
 permalink: /data/
-order: 1
+order: 3
 ---
 
 In Bangladesh, IATI data is of mixed quality. Some DPs reporting to the AIMS have not begun publishing to IATI, while others are publishing only very old data to IATI. On the other hand, there are many DPs with good quality data in IATI, and some DPs publishing to IATI are not accounted for at all in the AIMS.
