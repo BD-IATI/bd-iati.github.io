@@ -297,7 +297,7 @@ nav.sub-nav {
     ul {
         margin-left: 0px;
         margin-right:10px;
-        li, ol li {
+        li, ol li, ul li {
             margin-left:10px;
             a {
               padding:2px;
@@ -307,11 +307,14 @@ nav.sub-nav {
               text-decoration: none;
             }
         }
-        ol {
+        ol, ul {
             margin-left: 20px;
-            li {
-              list-style-type: number;
-            }
+        }
+        ul li {
+          list-style-type: square;
+        }
+        ol li {
+          list-style-type: number;
         }
     }
     width:20%;
