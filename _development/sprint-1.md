@@ -103,6 +103,8 @@ The software supplier is free to decide how to store the data at this stage. It 
 
 The XML files themselves could be stored in the database and/or as flat files.
 
+Note that we need to have some way of storing or accessing the AIMS data. This could be "on the fly", passed through directly from reading the AIMS database, or activities could be written to some table in the database.
+
 ### Storing individual activities
 
 As we approach the later stages of development and want to re-sync the data with the Datastore (to fetch new activities, or to update existing ones), we'll need to know what the activity looked like the last time we saw it. It might make sense to store each activity in a separate row in the table, like this:
@@ -139,11 +141,14 @@ At a minimum, we need the following fields to be made available about each activ
 * implementing organisation name
 * implementing organisation ref
 * implementing organisation type
+* recipient country (% tagged as `BD` - Bangladesh)
 
 A couple of notes on accessing this data:
 
 * **aid type** can be declared once at the activity level (`default-aid-type`) or multiple times at the transaction level (`aid-type`). For now, we can take either, and return one. We may later want to consider what to do if multiple different aid types appear, but we will leave this complication to one side for now.
 * **implementing organisation** is generally declared using the `role` of `participating-org`. However, we should also consider combining this with the `receiver-org` element on each transaction. Again, we will simplify this for now, but will eventually want to have some logic that can look at either. In the case of the transactions, we could select the receiver-org with the highest value of disbursements.
+
+Finally: this endpoint should make both IATI and AIMS data available in the same format (and a similar endpoint) so that it is easy to pull together in the user interface.
 
 ## 5. Read data from the AIMS in the IATI Standard
 
