@@ -6,7 +6,7 @@ permalink: /development/sprint-2/
 order: 2
 ---
 
-**STATUS: DRAFT**
+**STATUS: CONFIRMED**
 
 * 
 {:toc}

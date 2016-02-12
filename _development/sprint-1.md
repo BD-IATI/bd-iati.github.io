@@ -6,7 +6,7 @@ permalink: /development/sprint-1/
 order: 1
 ---
 
-**STATUS: DRAFT**
+**STATUS: CONFIRMED**
 
 * 
 {:toc}
@@ -172,6 +172,5 @@ At this stage, we only need a simple API that can:
 
 * write new activities to the AIMS for DPs already listed in [FundSource](http://aims.erd.gov.bd/AIMS/FundSource)
 * update activities in the AIMS
-* update trust funds in the AIMS
 
 This does not need to be all fields initially. We should start with titles and descriptions.
