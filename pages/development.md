@@ -22,7 +22,7 @@ In the **first phase**, data will be extracted from IATI and the AIMS, with proj
 
 In the **second phase**, donors will map their projects in IATI to those already contained in the AIMS. Establishing this project-level relationship is arguably the most important part to get right and we emphasise the challenge of this component - both in technical and conceptual terms. 
 
-The **third phase** will then test the import of a limited subset of fields - probably restricted to the title and description - into the AIMS. DPs can edit the IATI data before it is entered into the AIMS. Requires AIMS to accept data from the IATI import module. 
+The **third phase** will then test the import of a limited subset of fields - probably restricted to the title and description - into the AIMS. Requires AIMS to accept data from the IATI import module. 
 
 In the **fourth phase**, we will begin to establish techniques to reconcile multi-donor projects, focusing on co-financed projects.
 
