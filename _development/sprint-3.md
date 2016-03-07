@@ -6,7 +6,7 @@ permalink: /development/sprint-3/
 order: 3
 ---
 
-**STATUS: DRAFT**
+**STATUS: CONFIRMED**
 
 * 
 {:toc}
@@ -29,20 +29,22 @@ The main goals of sprint 3 are:
 
 ### DP data overview
 
-For the purposes of this sprint, we will use data from Canada and DFID.
+For the purposes of this sprint, we will use data from Canada, DFID, and the European Union (EU only if we have time).
 
-|  | Canada | DFID |
-| ------ | ------ | ---- |
-| Organisation identifier <sup>*</sup> | CA-3 | GB-1 |
-| Version | 2.01 | 1.05 |
-| Hierarchies | 1 | 2 |
-| Languages | English, French | English |
+|  | Canada | DFID | EU |
+| ------ | ------ | ---- | ---- |
+| Organisation identifier <sup>*</sup> | CA-3 | GB-1 | XI-IATI-EC_DEVCO |
+| Version | 2.01 | 1.05 | 1.04 |
+| Hierarchies | 1 | 2 | 2 |
+| Languages | English, French | English | English |
 
 <sup>*</sup> this is currently the only- or most-used identifier. There may eventually be more than one identifier in use; see below.
 
 The data from both DPs is good. See also some more detailed data analysis for [Canada](/data/canada/) and [DFID](/data/dfid/).
 
 ## 1. Build a general field selection interface
+
+A DP should see all projects that they manage. In other words, activities that at the end of sprint 2 have been determined as not managed by any other DP. DFID would see their activities and not any activities that they have delegated to another DP such as the World Bank.
 
 We need to have a way of allowing the user to provide some general preferences about where data should be sourced from for each field. Our assumption is that data quality is likely to be fairly consistent within individual DPs' data &ndash; so if descriptions are poor for one or two projects, they're likely to be poor for the rest of that DP's data.
 
@@ -62,7 +64,7 @@ Once a user has provided their general import preferences, we should store these
 
 I think it probably makes sense to just use the element name (e.g. `title`) as the name of the field. I can't see a reason why we would want any more granular controls than that.
 
-The interface should read from this preferences table when loading the interface, and display the user's previous choices.
+The interface should read from this preferences table when loading the interface, and display the user's previous choices. This means that in future, when new projects are published in their IATI data, they can choose to import them easily using the same set of preferences that they previously stated.
 
 [see mockup, tab "6. Set import preferences"](http://test.brough.io/bd/sprint3.htm)
 
@@ -82,7 +84,7 @@ The mockup for the previous step suggests that we allow a user to adjust prefere
 
 ## 4. Test import of basic data fields to the test AIMS system
 
-Once the user has established their preferences for field import, we can then proceed with importing those fields to the test AIMS system.
+Once the user has established their preferences for field import, we can then proceed with importing those fields to the **test** AIMS system. For the purposes of this sprint, we will only import the **title** and **description** from each project.
 
 The only mockup we have for this step is the button at the bottom of the "Review and adjust before import" step. We should also have some basic information provided back to the user about whether the import process was successful or not.
 
