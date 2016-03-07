@@ -4,10 +4,13 @@ description: Developing a sustainable process for importing IATI data to Banglad
 baseurl: ""
 url: "http://bd-iati.github.io" # the base hostname & protocol for your site
 github_username:  bd-iati
-email: 
+email: bd-iati@brough.io
 
 # Build settings
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+pagine_path: "blog/page:num"
+paginate: 10
 
 collections:
   documentation:
