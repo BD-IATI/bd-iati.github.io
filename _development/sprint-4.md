@@ -6,7 +6,7 @@ permalink: /development/sprint-4/
 order: 4
 ---
 
-**STATUS: DRAFT**
+**STATUS: CONFIRMED**
 
 * 
 {:toc}
@@ -29,18 +29,18 @@ The main goals of sprint 4 are:
 
 ### DP data overview
 
-For the purposes of this sprint, we will use data from Canada and DFID.
+For the purposes of this sprint, we will use data from Canada, DFID, UNDP and World Bank.
 
-|  | Canada | DFID |
-| ------ | ------ | ---- |
-| Organisation identifier <sup>*</sup> | CA-3 | GB-1 |
-| Version | 2.01 | 1.05 |
-| Hierarchies | 1 | 2 |
-| Languages | English, French | English |
+|  | Canada | DFID | UNDP | World Bank |
+| ------ | ------ | ---- | ---- | 
+| Organisation identifier <sup>*</sup> | CA-3 | GB-1 | XM-DAC-41114 | 44000 |
+| Version | 2.01 | 2.01 | 1.04 | 1.05 |
+| Hierarchies | 1 | 2 | 2 | 1 |
+| Languages | English, French | English | English | English |
 
 <sup>*</sup> this is currently the only- or most-used identifier. There may eventually be more than one identifier in use; see below.
 
-The data from both DPs is good. See also some more detailed data analysis for [Canada](/data/canada/) and [DFID](/data/dfid/).
+The data from all four DPs is good. We're looking at UNDP and World Bank data in this sprint because they operate projects funded by Canada and DFID. Note that the World Bank does not yet publish Trust Funds in its IATI data.
 
 ## 1. Allow users to pass activities over to each other
 
@@ -69,7 +69,7 @@ The main way that we handle this is to create an interface for the organisation 
 
 The Managing DP, when they log in, should be presented with a list of activities that have been assigned to them, with the option to map them against:
 
-* one of their own projects, OR
+* one of their own projects, **OR**
 * a trust fund.
 
 In the drop-down lists in the mock-up below, **all the Managing DP's projects** and **all trust funds** should be shown.
@@ -84,6 +84,8 @@ In this interface, we assume that the user has the right to handle Trust Funds. 
 
 We should create a simple overview of the Trust Funds interface that allows the Managing DP to decide what to do with the commitments that have been assigned to them (and which they have then mapped against a Trust Fund). They can choose to allow these new commitments to be entered into the AIMS, or to reject them.
 
+In the AIMS, the cumulative amount of commitments per DP is stored rather than any breakdown over time. In IATI data, we can show individual commitments.
+
 We don't need to enter this data to the AIMS at this point -- just to create the interface that makes it possible.
 
 [see mockup "Trust Funds"](http://test.brough.io/bd/sprint4.htm)
@@ -94,10 +96,10 @@ Once the Managing DP has assigned activities to their own projects, they should 
 
 We should show the list of the Managing DP's projects where other organisations' projects have been mapped to them. We should show:
 
-* total disbursements and commitments for the project by organisation (according to the AIMS data)
-* total disbursements and commitments for the project from the new IATI activities that have been assigned from other DPs
+* <s>total</s> *each* disbursement and commitment for the project by organisation (according to the AIMS data)
+* <s>total</s> *each* disbursement and commitment for the project from the new IATI activities that have been assigned from other DPs
 
-The user should be able to decide whether to accept or reject financial data from other DPs. They should not be able to reject individual transactions, but they should be able to remove all disbursements and/or all commitments from individual DPs.
+The user should be able to decide whether to accept or reject financial data from other DPs. <s>They should not be able to reject individual transactions, but they should be able to remove all disbursements and/or all commitments from individual DPs.</s> *We should show the breakdown of transactions for now. If it's too much data to show on the page (or if it isn't clear) then we can show the total value of commitments or disbursements.*
 
 [see mockup "Co-financing"](http://test.brough.io/bd/sprint4.htm)
 
