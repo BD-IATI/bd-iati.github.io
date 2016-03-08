@@ -28,7 +28,7 @@ We also have a good first version of the front-end working. We have [some screen
 We've come across some interesting challenges and questions -- some of them to do with the data, and some of them more conceptual questions.
 
 * **establishing "main" or "dominant" classifications** -- aid type, for example, can be published in many different places -- either in activities or in transactions. This becomes more complicated when using hierarchical activities. We came up with [a methodology for calculating the "dominant" aid type](https://github.com/BD-IATI/edi/issues/3) by looking at activities, then transactions.
-* **tracking changes in organisation identifiers** -- DFID updated its data to v2.01 from v1.05 last week. In the process, its organisation identifier changed from `GB-1` to `GB-GOV-1`. Our previous request for all activities from `GB-1` therefore returned no activities. After taking a look at the data, we updated the organisation identifier we were looking for. But it would also be useful if publishers used the `other-identifier` element to state their previous identifier, and if the IATI Datastore then would return those activities.
+* **tracking changes in organisation identifiers** -- DFID updated its data to v2.01 from v1.05 last week. In the process, its organisation identifier changed from `GB-1` to `GB-GOV-1`. Our previous request for all activities from `GB-1` therefore returned no activities. After taking a look at the data, we updated the organisation identifier we were looking for. But it would also be useful if publishers used the `other-identifier` element to state their previous identifier, and if the IATI Datastore then would return those activities too.
 
 ## Next steps
 
@@ -49,7 +49,7 @@ Keep reading for a more detailed walk-through of what we've developed to date.
 
 ![Select a DP to import](/img/aims-import-1-sm.png "Select a DP to import"){: .img-caption } 
 
-XML is the way that IATI data is made machine-readable, and the standard allows systems to understand how they can make use of this data. But for humans, it's sometimes a little scary. We therefore handle all of the importing of IATI data in the background, using the IATI Datastore to query data for individual DPs. The data is downloaded nightly to speed up the interface.
+XML is the way that IATI data is made machine-readable, and the standard allows systems to understand how they can make use of this data. But for humans, it's sometimes a little scary. We therefore handle all of the importing of IATI data in the background, using the [IATI Datastore](http://datastore.iatistandard.org) to query data for individual DPs. The data is downloaded nightly to speed up the interface.
 
 <hr class="hidden" />
 
@@ -77,7 +77,7 @@ In order to simplify this process, we automatically deselect all activities wher
 2. activities which are not in **Implementation** stage (excluding all closed activities)
 3. the [aid type](http://iatistandard.org/201/codelists/AidType/) is `B03` or `B04` (contributions to specific programs run by NGOs and multilaterals; and basket funds / pooled funds)
 
-The specific crtiera we use will certainly need to change. The first two criteria will need to be adjusted according to the Standard Operating Procedures of the AIMS, and the third criteria might not be necessary or appropriate given the following step (see below).
+The specific criteria we use will certainly need to change. The first two criteria will need to be adjusted according to the Standard Operating Procedures of the AIMS, and the third criteria might not be necessary or appropriate given the following step (see below).
 
 An interesting question which we need to explore further is what to do with remaining activities that have less than 100% tagged as Bangladesh. 
 
