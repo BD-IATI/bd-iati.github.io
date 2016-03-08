@@ -113,15 +113,20 @@ ul li {
 
 .img-caption-wrapper {
   display: block;
-  img, span.caption {
-    float:left;
-    clear:both;
-  }
-  img {
-    box-shadow:0 0 6px #666666;
-  }
+  width: 500px;
+  float: left;
+  overflow: hidden;
+  box-shadow: 0 0 6px #666666;
+  margin: 0px 20px 20px 0px;
   span.caption {
     font-size:0.8em;
+    background-color: #eeeeee;
+    opacity: 0.8;
+    font-size: 0.7em;
+    padding: 6px;
+    width: 100%;
+    display: block;
+    font-style: italic;
   }
 }
 
@@ -291,6 +296,11 @@ h1 {
             font-size: 18px;
         }
     }
+    .post {
+      ul, ol {
+        clear: both;
+      }
+    }
 }
 
 .posts {
@@ -380,4 +390,18 @@ nav.sub-nav {
         list-style-type: square;
     }
   }
+}
+
+hr {
+  width: 50%;
+  color: #666666;
+  clear: both;
+  margin: 10px auto;
+  border: 0;
+  color: #eeeeee;
+  background-color: #eeeeee;
+  height: 2px;
+}
+hr.hidden {
+  visibility: hidden;
 }
