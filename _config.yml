@@ -21,3 +21,12 @@ collections:
     output: true
   development:
     output: true
+
+authors:
+  mark:
+    name: Mark Brough
+    display_name: Mark
+    email: mark@brough.io
+    web: http://brough.io
+    twitter: mark_brough
+    github: markbrough
