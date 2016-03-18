@@ -30,12 +30,12 @@ The main goals of sprint 6 are:
 
 For the purposes of this sprint, we will use data from Canada, DFID, Netherlands.
 
-|  | Canada | DFID | UNDP | World Bank |
-| ------ | ------ | ---- | ---- | 
-| Organisation identifier <sup>*</sup> | CA-3 | GB-1 | XM-DAC-41114 | 44000 |
-| Version | 2.01 | 2.01 | 1.04 | 1.05 |
-| Hierarchies | 1 | 2 | 2 | 1 |
-| Languages | English, French | English | English | English |
+|  | Canada | DFID | Netherlands |
+| ------ | ------ | ---- | 
+| Organisation identifier <sup>*</sup> | CA-3 | GB-1 | XM-DAC-7 |
+| Version | 2.01 | 2.01 | 2.01 |
+| Hierarchies | 1 | 2 | 1 |
+| Languages | English, French | English | English |
 
 <sup>*</sup> this is currently the only- or most-used identifier. There may eventually be more than one identifier in use; see below.
 
