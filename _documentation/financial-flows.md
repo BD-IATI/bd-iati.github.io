@@ -52,8 +52,8 @@ Financial data relating to forward plans is found in two other elements, `<budge
 AIMS | IATI v1.x | IATI v2.x | IATI definition
 ---- | --------- | --------- | ---------------
 Commitment | C | 2 | A firm, written obligation from a donor or provider to provide a specified amount of funds, under particular terms and conditions, for specific purposes, for the benefit of the recipient.
-Actual Disbursement | D | 3 | Outgoing funds that are placed at the disposal of a recipient government or organisation, or funds transferred between two separately reported activities.
-Actual Expenditure | E | 4 | Outgoing funds that are spent on goods and services for the activity.
+Actual Disbursement | D; E | 3; 4 | D: Outgoing funds that are placed at the disposal of a recipient government or organisation, or funds transferred between two separately reported activities.<br />E: Outgoing funds that are spent on goods and services for the activity.
+Actual Expenditure | -- | -- | *see notes*
 
 Notes:
 
