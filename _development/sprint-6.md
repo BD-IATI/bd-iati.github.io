@@ -15,9 +15,10 @@ order: 6
 
 The main goals of sprint 6 are:
 
-1. Import financial data from IATI to the AIMS
-2. Handle tricky types of transactions
-3. Handle errors or unexpected changes in IATI data or the AIMS
+1. Collect and display IATI financial data
+2. Insert financial data from IATI to the AIMS - the first time
+3. Handle updates of IATI financial data, including tricky types of transactions, errors or unexpected changes in IATI data or the AIMS
+4. Create an overview dashboard for the DP, including import logs and configuration options.
 
 ### Data integrity
 
@@ -40,11 +41,11 @@ For the purposes of this sprint, we will use data from Canada, DFID, Netherlands
 
 The data from all three DPs is good.
 
-## 1. Import financial data from IATI to the AIMS
+## 1. Collect and display IATI financial data
 
-In sprint 3 (step 1) we build a "general field selection interface", allowing users to decide whether data should be taken from IATI or the AIMS.
+In sprint 3 (step 1) we built a "general field selection interface", allowing users to decide whether data should be taken from IATI or the AIMS.
 
-We need to extend that by breaking down the options for financial data into three parts and providing a little more detail:
+We need to extend that by breaking down "Financial data" field/section into three parts and providing a little more detail:
 
 1. commitments
 2. disbursements
@@ -53,9 +54,9 @@ We need to extend that by breaking down the options for financial data into thre
 For each category, we should show:
 
 * the total value in that category (e.g. sum of all commitments)
-* the amount per Bangladesh fiscal year in that category
+* the amount per **Bangladesh fiscal year** in that category
 
-For **commitments** and **disbursements**, in IATI, we should calculate this based on all transactions in each category. Remember that if we are looking at hierarchical projects, we should sum all transactions from all child projects, too.
+For **commitments** and **disbursements**, in IATI, we should calculate this based on all transactions in each category. Remember that if we are looking at hierarchical projects, we should sum all transactions from all child projects, too. For **disbursements**, we should also include all **expenditures** in this category.
 
 For **planned disbursements**, we should calculate this based on `<budget>` elements in all activities. We need some slightly more complicated logic here:
 
@@ -85,3 +86,95 @@ Having calculated this for each activity, in hierarchical activities, we would t
 
 * If there are budgets at hierarchy=1, then take only budgets from the hierarchy=1 activity. Ignore any budgets at hierarchy=2.
 * Otherwise, and if there are budgets at hierarchy=2, then sum the amounts for each period in each activity.
+
+## 2. Inserting financial data to AIMS - first time
+
+If the user has chosen to take financial data from IATI, then we should update in the following way, for each category:
+
+1. remove all financial data in the AIMS in that category
+2. insert all new IATI transactions in that category
+
+For example, if the user has chosen to import **commitments** then we should:
+
+1. remove all commitments from the AIMS
+2. insert each commitment in IATI as a new commitment in the AIMS
+
+We can do this for a few basic fields to begin with. We should store:
+
+* value (`transaction/value/text()`)
+* transaction date (`transaction/transaction-date/@iso-date`)
+* transaction currency (see below)
+
+### Calculating exchange rates
+
+We should use the Bangladesh Bank data to calculate exchange rates for each transaction.
+
+We do not yet have daily rates available, so for now we should use the monthly average rates. However, we should prepare for having daily rates now.
+
+* download data from Bangladesh Bank API for each month (by providing the last day of the month to the query)
+* store `DOLLAR_PER_CURRENCY` rates for each currency and day. This could be in a flat file or a database, up to you.
+
+Handling currency conversion for a particular transaction
+
+* obtain the currency code, either from:
+  * each transaction (`value/@currency`), OR
+  * the activity (`iati-activity/@default-currency`)
+* obtain the transaction value date (`transaction/value/@value-date`)
+* convert the transaction value (`transaction/value/text()`) to USD by using the *closest available currency conversion date to the transaction value date*, for the relevant currency code
+* store the currency conversion rate in the AIMS as well.
+
+### Adding remarks
+
+In each transaction in the AIMS, we should add into the `remarks` section:
+`Data automatically imported from IATI on YYYY-MM-DD`
+
+## 3. Handling updates of IATI financial data
+
+On a nightly basis, we will want to automatically re-sync IATI financial data with the AIMS' financial data.
+
+The methodology for doing this is as follows:
+
+1. Focus on projects where a link was established (in sprint 2) between the AIMS and IATI, and where the import preferences for that project (established in sprint 3) state that the financial data should come from IATI.
+2. For each of the relevant categories of financial data (commitments, disbursement, planned disbursement) -- again, which of these is relevant will depend on the import preferences for this project -- collect two list of all transactions in IATI and AIMS respectively with:
+   * transaction date
+   * transaction value
+3. If the AIMS contains any transactions not found in IATI, we should display a warning to the user that there was a mismatch (see below).
+4. If IATI contains any transactions not found in AIMS -- i.e. where the transaction date is not found in the AIMS -- new transactions should be inserted.
+
+### Warning on mismatch between IATI and AIMS transactions
+
+There could be several reasons why a transaction appears in AIMS and not in IATI:
+
+1. The user has manually entered a transaction into the AIMS
+2. Headquarters has removed a particular transaction from the IATI data (this should not happen, but it could)
+3. Headquarters has updated all the transaction dates in the IATI data to be different dates, e.g. if they are providing cumulative transactions rather than actual ones (again, this should not happen, but it could)
+4. Some error has occurred leading to all financial data disappearing from the IATI data (again, this should not happen, but it could theoretically happen either in the headquarters data, the IATI Datastore, or our import of the data).
+
+When this happens, we should:
+
+1. Pause automatic updates of the DP's IATI data until the issue is resolved
+2. Show an alert to the DP asking them to decide on a course of action.
+
+The alert should show the difference between IATI and AIMS and the transactions that appear in AIMS but not in IATI.
+
+The options for the user (for each project) should be:
+
+1. Remove transactions from AIMS and import new transactions from IATI
+2. Stop automatically importing IATI data and switch to taking data from the AIMS instead (this should update the project-specific import preferences)
+3. Take no action now but remind me next time the data is checked (presumably the following night)
+
+## 4. DP dashboard
+
+We are beginning to develop some quite complicated functionality at this point and it would be useful to develop a dashboard for each DP that shows what data has been imported from IATI, allows the DP to adjust import preferences, and shows any alerts.
+
+We should show the following screens (either as tabs or as sections of the same page):
+
+1. Latest data downloaded
+2. List of imports / changes to particular projects
+3. List of alerts for this DP (e.g. if something went wrong on import) -- e.g. the above warnings if there is a mismatch in financial data
+4. General import preferences and project-specific import preferences
+5. List of activities in IATI that have not been imported to the AIMS (and option to begin import of those activities -- which would take you to sprint 2)
+6. List of activities from other DPs that have been delegated to you
+7. List of your activities that you have delegated to other DPs (and ability to "recall" those activities if the other DP has not already mapped them to their own activitis in sprint 4)
+
+Some of these screens can be placeholders for now.
