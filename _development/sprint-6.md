@@ -66,8 +66,10 @@ Within each activity:
 * for each `revised` budget:
   * if it overlaps **partially** or **wholly** with the `original` budget, take the `revised` budget and remove the `original` budget
   * if it does not overlap at all, then take the `revised` budget.
+  
+See the example below for an explanation of this logic.
 
-E.g. 
+### Calculating planned disbursements: merging revised and original budgets
 
 | Budget type | Start date | End date | Value | Included? |
 | ----------- | ---------- | -------- | ----- | --------- |
@@ -78,3 +80,8 @@ E.g.
 | Revised | 2016-01-01 | 2016-06-30 | 300 | YES |
 | Revised | 2016-07-01 | 2016-12-31 | 200 | YES |
 | Revised | 2017-01-01 | 2017-06-30 | 150 | YES |
+
+Having calculated this for each activity, in hierarchical activities, we would then take the amounts for each period in each activity and add them together.
+
+* If there are budgets at hierarchy=1, then take only budgets from the hierarchy=1 activity. Ignore any budgets at hierarchy=2.
+* Otherwise, and if there are budgets at hierarchy=2, then sum the amounts for each period in each activity.
