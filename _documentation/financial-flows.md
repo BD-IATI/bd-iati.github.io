@@ -74,8 +74,3 @@ Project Cost in USD | Sum of all `budget` elements (though see note above - we m
 DP contribution | Sum of all `budget` elements for the managing DP
 Other contribution | Sum of all `budget` elements for other contributing DPs
 GoB sharing | *No mechanism for capturing this data in IATI &ndash; must be manually filled out in the AIMS*
-
-<div class="important-notice">
-<i class="fa fa-exclamation-triangle"></i>
-Is each expenditure linked to a disbursement? It looks like expenditures are linked to loan/grant agreements, unclear how this can be as if the disbursement is made to an implementer, that is all the one pot, so at most, the expenditure can be linked to the withdrawal application, and then is made from the resulting disbursement but financially is one pot.
-</div>
