@@ -30,16 +30,16 @@ The main goals of sprint 6 are:
 
 For the purposes of this sprint, we will use data from Canada, DFID, Netherlands.
 
-|  | Canada | DFID | Netherlands |
-| ------ | ------ | ---- | 
-| Organisation identifier <sup>*</sup> | CA-3 | GB-1 | XM-DAC-7 |
-| Version | 2.01 | 2.01 | 2.01 |
-| Hierarchies | 1 | 2 | 1 |
-| Languages | English, French | English | English |
+|  | Canada | DFID | Netherlands | Asian Development Bank |
+| ------ | ------ | ---- | ---- | ---- |
+| Organisation identifier <sup>*</sup> | CA-3 | GB-1 | XM-DAC-7 | 46004 |
+| Version | 2.01 | 2.01 | 2.01 | 1.03 |
+| Hierarchies | 1 | 2 | 1 | 1 |
+| Languages | English, French | English | English | English |
 
 <sup>*</sup> this is currently the only- or most-used identifier. There may eventually be more than one identifier in use; see below.
 
-The data from all three DPs is good.
+The data from all three DPs is good. NB, Asian Development Bank data uses v1.03 of the Standard where the [`location` field is structured differently](/documentation/versions/).
 
 ## 1. Collect and display IATI financial data
 
