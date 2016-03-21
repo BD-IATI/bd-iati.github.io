@@ -6,7 +6,7 @@ permalink: /development/sprint-6/
 order: 6
 ---
 
-**STATUS: DRAFT**
+**STATUS: CONFIRMED**
 
 * 
 {:toc}
@@ -128,6 +128,8 @@ Handling currency conversion for a particular transaction
 In each transaction in the AIMS, we should add into the `remarks` section:
 `Data automatically imported from IATI on YYYY-MM-DD`
 
+[see mockup, tab "Transactions"](http://test.brough.io/bd/sprint6.htm)
+
 ## 3. Handling updates of IATI financial data
 
 On a nightly basis, we will want to automatically re-sync IATI financial data with the AIMS' financial data.
@@ -163,6 +165,8 @@ The options for the user (for each project) should be:
 2. Stop automatically importing IATI data and switch to taking data from the AIMS instead (this should update the project-specific import preferences)
 3. Take no action now but remind me next time the data is checked (presumably the following night)
 
+[see mockup, tab "Transaction merge conflict alert"](http://test.brough.io/bd/sprint6.htm)
+
 ## 4. DP dashboard
 
 We are beginning to develop some quite complicated functionality at this point and it would be useful to develop a dashboard for each DP that shows what data has been imported from IATI, allows the DP to adjust import preferences, and shows any alerts.
@@ -178,3 +182,14 @@ We should show the following screens (either as tabs or as sections of the same 
 7. List of your activities that you have delegated to other DPs (and ability to "recall" those activities if the other DP has not already mapped them to their own activitis in sprint 4)
 
 Some of these screens can be placeholders for now.
+
+[see mockup, tab "Donor landing page"](http://test.brough.io/bd/sprint6.htm)
+
+## Update: first week of sprint 6
+
+In the first week of sprint 6 (in reality, only three days), we will focus on the following areas:
+
+* work with commitments and disbursements only (not planned disbursements / budgets for now)
+* obtain and store exchange rates from the Bank of Bangladesh
+* develop a simple screen that shows a summary of IATI transactions that would be imported to the AIMS, including the currency conversion rates and dates
+* show a simple DP dashboard with mostly placeholder data.
