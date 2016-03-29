@@ -15,6 +15,12 @@ order: 7
 
 We currently store information about the mapping between projects and "delegated" activities. Other DPs can delegate an activity to the Managing DP which can then merge those activities into its own project. This is important where, for example, Canada and DFID publish activiites which are there contributions to a World Bank project. We need to avoid double-counting, but we may also want to take some of this data in order to ensure that each DP's contributions are accurately reflected.
 
+We currently store this data by including the other activity on the (delegated) activity. For example: DFID contribution `GB-1-12345` of £500 to a World Bank-managed co-financed project `44000-P56789` would be recorded as:
+
+**Activity** Table: project `GB-1-12345`
+
+* MappedCofinancedActivity: 44000-P56789
+
 ## Collecting and storing preferences
 
 ![Merging DFID and World Bank financial data for a co-financed project, the Health Sector Development Programme](/img/aims-preferences-4-sm.png "Merging DFID and World Bank financial data for a co-financed project, the Health Sector Development Programme"){: .img-caption } 
