@@ -5,7 +5,7 @@ author: mark
 excerpt: At the mid point of development, we summarise our progress in the last two weeks, and look forward to challenges in the remaining stages of development.
 ---
 
-Since February we've been working with [Technovista](http://www.technovista.com.bd/) on building an IATI import tool for the Bangladesh AIMS. We now have a large amount of functionality developed, making it a good point to reflect and consider what's left to get done by the end of May. [(Check out our previous blog on earlier stages of development.)](/blog/)
+Since February we've been working with [Technovista](http://www.technovista.com.bd/) on building an IATI import tool for the Bangladesh AIMS. We now have a large amount of functionality developed, making it a good point to reflect and consider what's left to get done by the end of May. [(Check out our previous blogs on earlier stages of development.)](/blog/)
 
 ## Cleaning up the user interface
 
