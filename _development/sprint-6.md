@@ -193,3 +193,41 @@ In the first week of sprint 6 (in reality, only three days), we will focus on th
 * obtain and store exchange rates from the Bank of Bangladesh
 * develop a simple screen that shows a summary of IATI transactions that would be imported to the AIMS, including the currency conversion rates and dates
 * show a simple DP dashboard with mostly placeholder data.
+
+## Update: second week of sprint 6
+
+We have made great progress in the first part of this sprint and I think we have only one point remaining from above:
+
+1. Updating and handling alerts on mismatch
+
+In addition, we should add a couple of features to the DP Dashboard:
+
+1. List parse errors for individual DPs' data (preferably as detailed as possible - explaining what failed)
+2. Import transactional data for co-financed and trust fund projects
+
+Updating and handling alerts on mismatch is detailed above. It would be great to implement that, using the DP landing page to display the warnings.
+
+Parse errors can similarly be displayed on the DP landing page, in line with the existing mock-ups.
+
+[see mockup, tab "Donor landing page"](http://test.brough.io/bd/sprint6.htm)
+
+Regarding importing transactional data for co-financed and trust-fund projects...
+
+
+### Importing transactional data for co-financed / trust fund projects
+
+We already have a process for merging activities from different DPs -- building on the [methodology outlined here](http://bd-iati.github.io/documentation/merging-updating-cofinanced-projects/).
+
+Once we have merged financial data (in the current interface):
+
+1. these preferences should be saved (i.e. do take DFID commitments, do not take Netherlands commitments)
+2. the financial data that has been chosen to be included should then immediately be written to the AIMS. For co-financed projects, this should include individual transactions; for trust funds, it should update the total value of commitments held in the AIMS.
+
+### Handling updates for financial data for co-financed / trust fund projects
+
+When the DP imports their own activity to the AIMS (or when the activity is updated), the import routine for financial data should respect the preferences set here.
+
+For now, we can handle this by adjusting the financial data import [routine outlined above](#inserting-financial-data-to-aims---first-time) to be specific to an individual DP. For example:
+
+* on updating / importing a UNDP activity, check the commitments / disbursements / etc. for that project in the AIMS which are tagged as from UNDP
+* on updating / importing a DFID activity which has been mapped to a UNDP project in the AIMS (and where preferences have been set to import the DFID financial data), check the commitments / disbursements for the UNDP project in the AIMS which are tagged as from DFID.
