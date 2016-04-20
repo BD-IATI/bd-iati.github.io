@@ -89,7 +89,7 @@ These should be mapped from **Aid Type** as follows:
 
 If DAC sectors are used for this activity (where sector `vocabulary` is `1` or `2`), map between them and BD gov sectoral classifications. Otherwise, enter no sectors.
 
-See mapping file [CRS-BD-sector-codes.xls](CRS-BD-sector-codes.xls)
+See mapping file [CRS-BD-sector-codes.xls](../CRS-BD-sector-codes.xls)
 
 NB, this mapping file is incomplete and will be completed at a later date.
 
