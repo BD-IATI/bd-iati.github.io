@@ -95,32 +95,33 @@ NB, this mapping file is incomplete and will be completed at a later date.
 
 ## 3. Import implementing organisations
 
-**LEAVE THIS UNTIL WEEK 2**
-
-Rough outline (please don't implement this yet -- we need to discuss this further and I will provide mockups):
-
 Implementing organisations need to be mapped to the AIMS' Executing Agencies. These use different tables depending on whether the Executing Agency is a Ministry, DP or NGO (I think?).
 
-* for DPs, we can map using the organisation `ref` which is stored in FundSource, though that will be imperfect
-* for govt agencies and NGOs, we need to ask the user to select the correct organisation. IATI does not have a standard methodology for identifying government agencies, while NGO identifiers are likely to be unreliable in IATI data. 
+Organisation identifiers are not very good in IATI data, so we will need to ask the user to select the correct organisation. For DPs, we can try selecting them using the organisation `ref` which is stored in FundSource, though that will be imperfect. IATI does not have a standard methodology for identifying government agencies, while NGO identifiers are likely to be unreliable.
 
-We can probably integrate this into step 3, with something like:
+We should integrate this into existing step 3 in the following way:
 
-1. ask if each implementing organisation is a DP, BD government, or NGO
-2. ask the user to select the organisation from a list. If the implementing organisation is not present in the list, provide the user with the opportunity to add a new organisation (we need to think about the approvals process for new implementing organisations). Also allow the user to state that the organisation is unclear (e.g. just states OTHER).
+1. ask if each implementing organisation is a DP, BD government, an NGO, or unknown (e.g. it may just state `OTHER`)
+2. given the type of implementing organisation:
+  1. ask the user to select the organisation from a list (e.g. if they selected `Govt`, the list should show only government Ministries / Agencies).
+  2. if the implementing organisation is not present in the list, provide the user with the opportunity to add a new organisation (we will consider later adding an approvals process for new implementing organisations). 
+  3. Also allow the user to state that the organisation is unclear (e.g. just states `DONOR`).
 3. apply this to all projects
-4. for those organisations where the implementing organisation is another DP, suggest that the project should be delegated, but allow the user to reject that.
-5. for those projects where the organisation is unclear, allow the user to enter the specific organisation.
+4. for those organisations where the implementing organisation is another DP, suggest that the project should be delegated to the other Managing DP, but allow the user to reject that.
 
 We can try and help the user with some of these steps by:
 
-1. guessing whether it's a DP, BD government or NGO (using the organisation `type` attribute)
-2. for those projects already mapped to the AIMS, we could try and use the existing extending organisations in the AIMS and link them together
+1. guessing whether it's a DP, BD government or NGO (using the organisation `type` attribute -- [see codelist](http://iatistandard.org/202/codelists/OrganisationType/))
+2. for those projects already mapped to the AIMS, we could try and use the existing extending organisations in the AIMS and link them together (though that will get complicated where there is more than one implementing organisation)
 3. we could also try and match strings in the IATI data with the name in the AIMS.
 
-NB: additional complication is that there can be more than one implementing organisation in IATI data, and we should take each of them.
+We should get the basics running first and can then try to see if we can implement any of these steps to speed things up.
 
-**TODO: MB to provide mockups**
+NB: there can be more than one implementing organisation in IATI data, and we should take each implementing organisation, not only one.
+
+[See mockups](http://test.brough.io/bd/sprint5.htm) -- the three steps on that page could be on different pages. Or the next step could only be revealed when having completed the previous step? E.g. "determine specific organisation" should show only if "determine organisation type" has been completed.
+
+Please feel free to experiment with the user interface here if you think there is a better way of presenting this information.
 
 ## 4. Import project documents
 
