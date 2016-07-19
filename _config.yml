@@ -21,6 +21,10 @@ collections:
     output: true
   development:
     output: true
+  finalreport:
+    output: true
+
+gems: [jekyll-paginate]
 
 authors:
   mark:
