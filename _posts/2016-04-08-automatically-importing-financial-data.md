@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Automatically importing financial data into Bangladesh's AIMS
 author: mark
 excerpt: At the mid point of development, we summarise our progress in the last two weeks, and look forward to challenges in the remaining stages of development.
