@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Using open data to solve development challenges
 author: mark
 excerpt: At the end of the project to import IATI data into the Bangladesh AIMS, we reflect on lessons learned and suggest some next steps.
