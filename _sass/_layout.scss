@@ -297,11 +297,6 @@ h1 {
             font-size: 18px;
         }
     }
-    .post {
-      ul, ol {
-        clear: both;
-      }
-    }
 }
 
 .posts {
@@ -339,16 +334,19 @@ nav.sub-nav {
           list-style-type: number;
         }
     }
-    width:20%;
-    min-width:250px;
+    max-width:300px;
+    min-width: 150px;
+    padding-right: 20px;
     float:left;
+    @include media-query($on-palm) {
+      float:none;
+    }
     ul li.sub-nav-header {
         margin-left:0px;
     }
 }
 .post-content-sub-nav {
-    width: 80%;
-    float:left;
+    width: 100%;
 }
 
 /* AnchorJS links */
@@ -382,16 +380,23 @@ nav.sub-nav {
   padding: 8px;
   float: right;
   width: 350px;
+  clear: none;
+  @include media-query($on-palm) {
+    width: 100%;
+  }
   li {
     list-style-type: none;
     font-size: 1rem;
   }
   ul {
-    margin-left: 15px;
+    margin-left: 0px;
     li {
         font-size: 0.9rem;
         list-style-type: square;
     }
+  }
+  li > ul, li > ol {
+    margin-left:15px;
   }
 }
 
