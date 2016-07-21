@@ -114,6 +114,7 @@ ul li {
 .img-caption-wrapper {
   display: block;
   width: 500px;
+  max-width:100%;
   float: left;
   overflow: hidden;
   box-shadow: 0 0 6px #666666;
@@ -339,6 +340,7 @@ nav.sub-nav {
         }
     }
     width:20%;
+    min-width:250px;
     float:left;
     ul li.sub-nav-header {
         margin-left:0px;
