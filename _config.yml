@@ -26,6 +26,10 @@ collections:
 
 gems: [jekyll-paginate]
 
+exclude: [bower_components]
+
+keep_files: [bower_components]
+
 authors:
   mark:
     name: Mark Brough
