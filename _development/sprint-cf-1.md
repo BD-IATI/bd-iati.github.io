@@ -34,7 +34,9 @@ Subsequent sprints will deal with:
 
 ## 1.1 Establish basic test framework
 
-We agreed to use the Cucumber framework for writing a series of Behaviour-Driven Design tests. We need to establish this on the existing AIMS to ensure that any subsequent development does not break the existing system. Let's start with the following two tests to make sure that (1) the main Dashboad loads; (2) there are a number of projects found in the List; (3) each of the project pages loads
+We agreed to use the [Cucumber framework](https://cucumber.io/docs/reference) for writing a series of Behaviour-Driven Design tests. We need to establish this on the existing AIMS to ensure that any subsequent development does not break the existing system. Let's start with the following two tests to make sure that (1) the main Dashboad loads; (2) there are a number of projects found in the List; (3) each of the project pages loads.
+
+### Tests
 
 ```
 Feature: Dashboard loads correctly
