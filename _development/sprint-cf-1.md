@@ -132,8 +132,8 @@ Feature: Policy markers
 
 For each project, add two new fields to AIMS:
 
-* Title (Bengali)
-* Objective (Bengali)
+* `Title (Bengali)`
+* `Objective (Bengali)`
 
 For all configurable codelists in the `Configuration` admin interface and for all configurable codelists in the `Setup` admin interface (with the exception of: `User Verification`, `Exchange Rate`, `Currency Mapping`): add an additional field: `Name (Bengali)`
 
