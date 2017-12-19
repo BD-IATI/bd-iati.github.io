@@ -88,7 +88,7 @@ For each field, add "significance" flag (displayed as a drop-down menu) with the
 
 See [PolicySignificance codelist](http://iatistandard.org/202/codelists/PolicySignificance/)
 
-See also IATI [`policy-marker` element](iatistandard.org/202/activity-standard/iati-activities/iati-activity/policy-marker)
+See also IATI [`policy-marker` element](http://iatistandard.org/202/activity-standard/iati-activities/iati-activity/policy-marker)
 
 Note that this would be distinct from the existing sector classification.
 
